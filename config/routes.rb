@@ -1,8 +1,10 @@
 PersonalPageApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/resume"
-  get "static_pages/about"
-  get "static_pages/projects"
+  resources :messages
+  root  'static_pages#home'
+  match '/resume',    to: 'static_pages#resume',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/projects', to: 'static_pages#projects', via: 'get'
+  match '/message', to: 'messages#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

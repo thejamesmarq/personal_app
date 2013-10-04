@@ -1,5 +1,6 @@
 <% provide(:title, 'About') %>
-<h1>James Marquradt</h1>
 <p>
-  All unimportant information about me.
+	<h2>Here's something you might not know about me</h2>
+	<% message = Tidbit.order("RANDOM()").first.info %>
+	<%= message %>
 </p>
