@@ -11,6 +11,4 @@ class StaticPagesController < ApplicationController
   def projects
   end
 
-  def message
-  end
 end
